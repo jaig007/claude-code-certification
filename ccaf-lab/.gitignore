@@ -1,0 +1,8 @@
+# Local Claude Code configuration — not for version control
+CLAUDE.local.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
