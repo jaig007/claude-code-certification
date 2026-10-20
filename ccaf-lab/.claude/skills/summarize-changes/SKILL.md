@@ -1,5 +1,6 @@
 ---
-description: Summarizes uncommitted changes and flags anything risky. Use when the user asks what changed, wants a commit message, or asks to review their diff.
+description: Summarizes uncommitted git changes as bullet points with a Risks section.
+when_to_use: Use whenever the user asks "what did I change", "what changed", "summarize my changes", or wants a commit message or diff review.
 ---
 
 ## Current changes
