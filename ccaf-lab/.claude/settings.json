@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": ["mcp__tracker__list_issues"],
+    "deny": ["mcp__tracker__close_issue"]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [{ "type": "command", "command": "python .claude/hooks/protect.py" }]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [{ "type": "command", "command": "python .claude/hooks/run_tests.py" }]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "tracker": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "D:\\claude-code-certification\\ccaf-lab\\mcp\\tracker_server.py"
+      ],
+      "env": {}
+    }
+  }
+}
