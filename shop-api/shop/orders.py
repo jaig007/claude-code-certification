@@ -14,8 +14,11 @@ def place_order(cart, region):
             inventory.release(sku, qty)
         raise
 
+    # Gift wrap fee is not discounted and is added before tax.
     subtotal = round(
-        sum(bulk_discount(i["qty"], i["price"]) for i in cart.items.values()), 2
+        sum(bulk_discount(i["qty"], i["price"]) for i in cart.items.values())
+        + cart.gift_wrap_total(),
+        2,
     )
     tax = calculate_tax(subtotal, region)
     return {
